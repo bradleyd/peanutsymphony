@@ -15,8 +15,9 @@ group :assets do
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
 end
-
+gem 'json'
 gem 'jquery-rails'
+gem 'aws-s3', :require => 'aws/s3'  
 
 # Use unicorn as the web server
 # gem 'unicorn'
