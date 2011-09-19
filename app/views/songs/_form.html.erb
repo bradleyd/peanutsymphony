@@ -1,0 +1,23 @@
+<%= form_for(@song, :html => {:multipart => true}) do |f| %>
+  <% if @song.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@song.errors.count, "error") %> prohibited this gallery from being saved:</h2>
+
+      <ul>
+      <% @song.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <%= f.file_field :mp3file %><br />
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

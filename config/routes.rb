@@ -1,16 +1,12 @@
 Peanutsymphony::Application.routes.draw do
 
-  get "songs/index"
-
-  get "songs/upload"
-
-  get "songs/delete"
 
   devise_for :users do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
   
   get "welcome/index"
+  resources :songs
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

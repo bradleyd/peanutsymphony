@@ -1,2 +1,17 @@
-<h1>Songs#index</h1>
-<p>Find me in app/views/songs/index.html.erb</p>
+<header>
+  <h1>My First Music Streaming Application</h1>
+</header>
+    <h2>Download/Delete Songs</h2>
+    <table>
+    <% @songs.each do |song| %>
+        <tr>
+            <td><%= song.key %></td>
+            <td><%= link_to "HTML5 Audio", download_url_for(song.key), :class => "html5" %></td>
+            <td><%= link_to "Download", download_url_for(song.key) %></td>
+            <td><%= link_to "Torrent", torrent_url_for(song.key) %></td>
+            <td><%= link_to "Delete",  "songs/delete/?song=" + song.key, :confirm => 'Are you sure you want to delete ' + song.key + '?' %></td>
+        </tr>
+    <% end %>
+    </table>
+<div class="clear"></div>
+<%= link_to 'New Song', new_song_path %>
