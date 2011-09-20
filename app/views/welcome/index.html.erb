@@ -1,2 +1,21 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<p> Welcome,
+the Peanut Symphony is an online music area where you can uplaod your childrens music for all of your realtives and friends can lsiten, download, or purchase some gifts.  Peanut Symphony is completely free and will always be.  
+<b>Just click one of the buttons below to get started.</b>
+</p>
+<ul>
+  <li> The song must be from a child or group of children </li>
+  <li> It does not matter what format you uplaod the final song will be put inot a royality free mp3 foramt </li>
+  <li> You can send out notifications to family and friends so they can come download or listen--this inlcudes twitter, google+, and facebook</li>
+</ul>
+<div class="row">
+  <div class="span12">
+    <div class="row">
+      <div class="span6">
+        <%= link_to "Get Started", new_user_session_path, :class => 'btn large primary' %>
+      </div>
+      <div class="span6">
+        <%= link_to "View My Songs", songs_path, :class => 'btn large primary' %>
+      </div>
+    </div>
+  </div>
+</div>

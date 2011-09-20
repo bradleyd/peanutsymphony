@@ -1,4 +1,5 @@
 class SongsController < ApplicationController
+  before_filter :authenticate_user!
   def index
     #@songs = AWS::S3::Bucket.find(BUCKET).objects
     @songs = Song.where("user_id = ?", current_user.id)
