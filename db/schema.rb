@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(:version => 20110919005813) do
     t.string   "name"
     t.string   "mp3file"
     t.integer  "user_id"
+    t.string   "original_filename"
+    t.string   "path"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

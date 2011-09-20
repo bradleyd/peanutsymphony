@@ -1,7 +1,7 @@
 class Song < ActiveRecord::Base
   belongs_to :user
 
-  attr_accessible :mp3file
+  attr_accessible :name, :mp3file
 
   def upload_file(file)
    begin
@@ -16,10 +16,8 @@ class Song < ActiveRecord::Base
    end
  end
 
-private
-
-  def sanitize_filename(file_name)
-    just_filename = File.basename(file_name)
-    just_filename.sub(/[^\w\.\-]/,'_')
-  end
+ def sanitize_filename(file_name)
+   just_filename = File.basename(file_name)
+   just_filename.gsub(/[\W\.\s-]+/, '_')
+ end
 end

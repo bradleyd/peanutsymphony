@@ -4,7 +4,8 @@ class CreateSongs < ActiveRecord::Migration
       t.string :name
       t.string :mp3file
       t.integer :user_id
-
+      t.string :original_filename
+      t.string :path
       t.timestamps
     end
   end
