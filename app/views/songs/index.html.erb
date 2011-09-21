@@ -2,7 +2,17 @@
   <h1>My First Music Streaming Application</h1>
 </header>
     <h2>Download/Delete Songs</h2>
-    <table>
+    <table class="zebra-striped">
+      <thead>
+        <tr>
+          <th>Song Name</th>
+          <th>HTML5 Player</th>
+          <th>Download</th>
+          <th>Torrent</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
     <% @songs.each do |song| %>
         <tr>
             <td><%= link_to song.name, song %></td>
@@ -11,7 +21,8 @@
             <td><%= link_to "Torrent", torrent_url_for(song.original_filename) %></td>
             <td><%= link_to 'Delete', song, :confirm => 'Are you sure?', :method => :delete %></td>
         </tr>
-    <% end %>
+      <% end %>
+    </tbody>
     </table>
 <div class="clear"></div>
-<%= link_to 'New Song', new_song_path %>
+<%= link_to 'New Song', new_song_path, :class => 'btn info' %>

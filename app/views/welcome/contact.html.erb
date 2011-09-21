@@ -1,0 +1,11 @@
+<%= form_tag('/welcome/contact', :id => 'contact_form') do %>
+  <%= label :email, :name, "Name:" %>
+  <%= text_field :email, :name %>
+  <%= label :email, :address, "Address:" %>
+  <%= text_field :email, :address, :class => 'required email' %>
+  <%= label :email, :subject, "Subject:" %>
+  <%= text_field :email, :subject %>
+  <%= label :email, :body, "Message:" %>
+  <%= text_area :email, :body, :rows => 8, :cols => 50 %>
+  <%= submit_tag "Send", :id => 'submit_email' %>
+<%end%>

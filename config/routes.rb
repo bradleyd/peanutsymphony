@@ -6,6 +6,7 @@ Peanutsymphony::Application.routes.draw do
   end
   
   get "welcome/index"
+  get "welcome/about"
   resources :songs
 
   # The priority is based upon order of creation:

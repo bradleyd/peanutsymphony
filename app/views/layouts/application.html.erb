@@ -74,16 +74,16 @@
   <body>
     <div class="alert-message success"%>
       <p><%= notice %></p>
+      <p><%= alert %></p>
     </div>
-    <p class="alert"><%= alert %></p>
      <div class="topbar">
       <div class="fill">
         <div class="container">
           <%= link_to "Peanut Symphomy", welcome_index_path, :class => 'brand' %>
 
           <ul class="nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li class="active"><%= link_to 'Home', welcome_index_path %></li>
+            <li><%= link_to "About", welcome_about_path %></li>
             <li><a href="#contact">Contact</a></li>
             <% if user_signed_in? %>
               <li><%= link_to "Sign out", destroy_user_session_path, :method => 'delete' %></li>
@@ -105,7 +105,7 @@
 
       <div class="content">
         <div class="page-header">
-          <h1>Welcome <small>where every kid is a star!</small></h1>
+          <h1>Welcome, where every kid is a rock star!</h1>
         </div>
         <div class="row">
           <div class="span10">
