@@ -52,8 +52,8 @@ module Peanutsymphony
     config.assets.version = '1.0'
     @s3
     AWS::S3::Base.establish_connection!(  
-      :access_key_id     => 'AKIAJ6Z45AB6YOEKKW6A',  
-      :secret_access_key => '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'  
+      :access_key_id     => '',  
+      :secret_access_key => ''  
     )  
     BUCKET='peanutsymphony'
   end
